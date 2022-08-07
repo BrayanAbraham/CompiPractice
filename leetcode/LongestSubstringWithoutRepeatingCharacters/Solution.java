@@ -1,11 +1,11 @@
-package leetcode;
+package leetcode.LongestSubstringWithoutRepeatingCharacters;
 
 import java.util.HashMap;
 
-public class LongestSubstringWithoutRepeatingCharacters {
+public class Solution {
     public static void main(String[] args) {
         String s = "abcabcbb";
-        LongestSubstringWithoutRepeatingCharacters object = new LongestSubstringWithoutRepeatingCharacters();
+        Solution object = new Solution();
         System.out.println(object.lengthOfLongestSubstring(s));
         s = "bbbbbb";
         System.out.println(object.lengthOfLongestSubstring(s));

@@ -1,13 +1,13 @@
-package leetcode;
+package leetcode.TwoSum;
 
 import java.util.HashMap;
 
-class TwoSum{
+class Solution {
     public static void main(String[] args) {
         int[] nums = { 3, 3 };
         int target = 6;
 
-        TwoSum object = new TwoSum();
+        Solution object = new Solution();
 
         int[] result = object.twoSum(nums, target);
 
@@ -18,7 +18,6 @@ class TwoSum{
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int[] result = { -1, -1 };
-
 
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);

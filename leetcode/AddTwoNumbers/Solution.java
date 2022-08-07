@@ -1,23 +1,23 @@
-package leetcode;
+package leetcode.AddTwoNumbers;
 
 import leetcode.utility.ListNode;
 
-public class AddTwoNumbers {
+public class Solution {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(9,
                 new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))))));
         ListNode l2 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))));
 
-        ListNode result = new AddTwoNumbers().addTwoNumbers(l1, l2);
+        ListNode result = new Solution().addTwoNumbers(l1, l2);
 
         while (result != null) {
             System.out.print(result.val);
             result = result.next;
         }
     }
-    
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode result = null, head = null , temp = null;
+        ListNode result = null, head = null, temp = null;
         int carry = 0;
 
         while (l1 != null && l2 != null) {
@@ -37,7 +37,7 @@ public class AddTwoNumbers {
             l1 = l1.next;
             l2 = l2.next;
         }
-        
+
         while (l1 != null) {
             int res = l1.val + carry;
             carry = res / 10;
